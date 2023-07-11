@@ -22,7 +22,7 @@ clc job submit ./build/libs/simple-streaming-pipeline-1.0-SNAPSHOT-all.jar
 ### Observe the Map Updates
 
 ```
-clc map -n my-map entry-set
+clc map -n {{ .MapName}} entry-set
 ```
 
 ### Clean Up
