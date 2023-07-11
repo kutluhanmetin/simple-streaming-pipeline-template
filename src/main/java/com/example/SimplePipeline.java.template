@@ -9,11 +9,13 @@ import com.hazelcast.jet.pipeline.Sinks;
 import com.hazelcast.jet.pipeline.test.TestSources;
 import org.hashids.Hashids;
 
+import System;
 import java.util.AbstractMap;
 
 public class SimplePipeline {
     public static void main(String[] args) {
-        final String mapName = (args.length > 0)? args[0] : "{{ .MapName}}";
+        System.out.println("I am currently running on the cluster: {{ .ClusterName}}")
+	final String mapName = (args.length > 0)? args[0] : "{{ .MapName}}";
         // Create a pipeline that creates one item per second
         // and writes it to a map with the name given as an argument or my-map.
         Pipeline pipeline = Pipeline.create();
